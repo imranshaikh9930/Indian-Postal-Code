@@ -1,38 +1,115 @@
 .App {
-  text-align: center;
+
+  width: 100vw;
+  font-family: Inter;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main{
+  padding: 0px 25px;
+  overflow-x: hidden;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+li{
+  list-style-type: none;
+  padding: 10px 0px;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+  white-space:  nowrap;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.input-container{
+  width: 90%;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  border:2px solid black;
+  border-radius: 8px;
+ 
+}
+svg{
+  padding: 5px 4px;
+}
+.pincode-search{
+  padding: 8px;
+  width: 80%;
+  margin: 10px 0px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+button{
+  padding: 7px 57px;
+  background: black;
   color: white;
+  border-radius: 7px;
+}
+button:hover{
+  background: white;
+  color: black;
+  cursor:pointer;
+  transition: all .5s ease-in-out;
+ 
+}
+.input-container > input{
+  width: 100%;
+  padding: 8px 0px;
+  border: none;
+  outline: none;
+  /* font-weight: 600; */
+  font-weight: bold;
+  padding: 0px 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.cards{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  padding: 22px 0px;
+  width: 100vw;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card{
+  border: 2px solid black;
+  border-radius: 15px;
+  padding: 15px;
+  width: 300px;
+  height:200px;
 }
+.loader{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+
+@media screen and (max-width:768px) {
+  .main{
+    
+  }
+  .input-container{
+    width: 100%;
+    margin: auto;
+  }
+  .cards{
+    gap: 2.8rem;
+    /* justify-content: center; */
+  
+
+   }
+  .card{
+    max-width: 280px;
+    width:100% !important;
+    height: 100%;
+    max-height: 250px;
+    padding: 10px; 
+
+  } 
+  
+ } 
+
+
+ @media screen  and (max-width:655) {
+  .cards{
+    flex-direction: column;
+  }
+  
+ }
